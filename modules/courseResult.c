@@ -99,3 +99,12 @@ void viewCourseResult(CourseResult result)
            result.course->code, result.course->name, result.course->credit);
     printf("Marks: %.2f\n", result.marks);
 }
+CourseResult createCompletedCourseResult(Course *course, double marks) {
+    return createCourseResult(course, marks);
+}
+
+CourseResult createIncompleteCourseResult(Course *course) {
+    return createCourseResult(course, -1);
+}
+CourseResult createCompletedCourseResult(Course *course, double marks);
+CourseResult createIncompleteCourseResult(Course *course);
